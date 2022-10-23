@@ -1,5 +1,6 @@
 ## React-TODO 🗊
-A minimal todolist app made for organising my tasks.
+A minimal todolist app made for organising my tasks.<br/>
+Currently uses Browser LocalStorage.
 
 ##### Made with: ``React`` ``ChakraUI``
 
