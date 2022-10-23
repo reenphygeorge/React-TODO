@@ -16,6 +16,7 @@ function AddTodo({ insertTodo }) {
             return;
         }
         insertTodo(Content)
+        setContent('');
     }
 
     return (
