@@ -4,7 +4,7 @@ Currently uses Browser LocalStorage.
 
 ##### Made with: ``React`` ``ChakraUI``
 
-### Wanna Contribute, Follow along
+### Installation
 1. Clone this repo
       
         git clone https://github.com/reenphygeorge/React-TODO
@@ -17,3 +17,5 @@ Currently uses Browser LocalStorage.
       
         pnpm start
 4. Start Tinkering ⭐
+
+###### Wanna Contribute, refer [here](https://github.com/reenphygeorge/React-TODO/blob/master/CONTRIBUTING.md)
