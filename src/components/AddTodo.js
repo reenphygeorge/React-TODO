@@ -29,4 +29,4 @@ function AddTodo({ insertTodo }) {
     )
 }
 
-export default AddTodo
+export default AddTodo;
