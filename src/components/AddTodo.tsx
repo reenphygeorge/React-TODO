@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { HStack, Input, Button, useToast } from '@chakra-ui/react'
 
-function AddTodo({ insertTodo }) {
+function AddTodo({ insertTodo }: any) {
 
     const [Content, setContent] = useState('')
     const toast = useToast();
