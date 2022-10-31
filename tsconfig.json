@@ -4,7 +4,7 @@
         "jsx": "react",
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "module": "CommonJS",
+        "module": "ES6",
         "noImplicitAny": false,
         "outDir": "./build/",
         "preserveConstEnums": true,
@@ -19,6 +19,6 @@
         "noUnusedParameters": true,
         "removeComments": true
     },
-    "exclude": ["node_modules", "build"],
+    "exclude": ["node_modules", "build", "webpack.config.js"],
     "include": ["src/**/*"]
 }
