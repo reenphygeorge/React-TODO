@@ -16,7 +16,7 @@ const TodoList = ({ todos, deleteTodo }: TodoListProps) => {
     if (!todos.length) {
         return (
             <Badge colorScheme="green" p="5" m="10" borderRadius="lg">
-                All Done Yay!!
+                No tasks left to do 🎉
             </Badge>
         );
     }
