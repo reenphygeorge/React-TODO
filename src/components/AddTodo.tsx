@@ -6,7 +6,7 @@ function AddTodo({ insertTodo }: any) {
     const [Content, setContent] = useState('')
     const toast = useToast();
     var handleSubmit = () => {
-        if (!Content) {
+        if (!Content || Content.trim().length === 0) {
             toast({
                 title: 'No content',
                 status: 'error',
