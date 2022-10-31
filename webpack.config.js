@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV == 'production';
 
 
 const config = {
-    entry: './src/index.jsx',
+    entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.[contenthash].js',
@@ -19,8 +19,8 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
-            favicon: path.resolve(__dirname, 'assets', 'images' ,'favicon.png'),
+            template: './src/index.html',
+            favicon: './assets/images/favicon.png',
             minify: {
                 removeAttributeQuotes: isProduction,
                 collapseWhitespace: isProduction,
@@ -32,8 +32,9 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/i,
-                loader: 'babel-loader',
+                test: /\.(ts|tsx)$/i,
+                loader: 'ts-loader',
+                exclude: ['/node_modules/'],
             },
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
@@ -45,6 +46,9 @@ const config = {
                 use: ['source-map-loader'],
             },
         ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
     },
 };
 

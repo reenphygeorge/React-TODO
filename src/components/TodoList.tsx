@@ -2,7 +2,17 @@ import React from 'react'
 import { VStack, Text, HStack, IconButton, StackDivider, Spacer, Badge } from '@chakra-ui/react'
 import { FaTrash } from 'react-icons/fa';
 
-function TodoList({ todos, deleteTodo }) {
+interface Todo {
+    id: string;
+    body: string;
+  }
+
+interface TodoListProps {
+    todos: Array<Todo>;
+    deleteTodo: (id: string) => void;
+}
+
+function TodoList({ todos, deleteTodo }: TodoListProps) {
 
     if (!todos.length) {
         return (
@@ -27,7 +37,7 @@ function TodoList({ todos, deleteTodo }) {
                 <HStack key={todo.id}>
                     <Text>{todo.body}</Text>
                     <Spacer />
-                    <IconButton icon={<FaTrash />} isRound='true' onClick={() => deleteTodo(todo.id)} />
+                    <IconButton icon={<FaTrash />} isRound onClick={() => deleteTodo(todo.id)} aria-label={''} />
                 </HStack>
             ))}
         </VStack>
