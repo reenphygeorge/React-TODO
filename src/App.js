@@ -1,9 +1,8 @@
 import { Heading, useColorMode } from '@chakra-ui/react';
-import AddTodo from './components/AddTodo';
-import TodoList from './components/TodoList';
+import {AddTodo, TodoList} from './components';
 import { VStack, IconButton } from '@chakra-ui/react';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid'
 
 function App() {
